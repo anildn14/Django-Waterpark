@@ -1,0 +1,22 @@
+{% extends 'water_park/base.html' %}
+{% block title %} Comments {% endblock %}
+{% block wp_comments %}active{% endblock %}
+{% block body %}
+<div class="container-fluid">
+    <div class="container-fluid">
+        <a href="{% url 'water_park:add-comment' %}" class="btn btn-default" role="button" style="display: inline-block;width:100%">Add New Comment</a>
+    </div>  
+    {% for com in com_details %}
+    <br>
+    <div>
+        <a href="{% url 'water_park:delete-comment' com.id %}" class="btn btn-danger btn-sm btn-delete" role="button" style="display: inline-block;">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a>
+
+        <h4 style="display: inline;color: white">{{ com.comment_name }} <h5 style="display: inline;font-weight:bold">< {{ com.comment_email_id }} ></h5> <h6 style="display: inline;font-weight:bold">on {{ com.comment_time }}</h6> comments :</h4>
+        <h3 style="display:inline;font-weight: bold; ">{{ com.comment_text }}</h3>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

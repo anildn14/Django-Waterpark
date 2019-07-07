@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Splash{% endblock %}</title>
+    <!-- Loads the path to static file -->
+    {% load staticfiles %}
+    <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="{% static 'water_park/style.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'water_park/images/wp_titlebar_5.png' %}" />
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+    <!-- Header -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'water_park:index' %}">Splash</a>
+    </div>
+
+    <!-- Items -->
+    <div class="collapse navbar-collapse" id="topNavBar">
+        <ul class="nav navbar-nav">
+            <li class="{% block wp_details %}{% endblock %}">
+                <a href="{% url 'water_park:index' %}">
+                    <!-- <span class="oi oi-droplet">Hello</span> -->
+                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;&nbsp;Details
+                    <!-- <span class="glyphicon glyphicon-cd">Hello</span> -->
+                </a>
+            </li>
+            <li class="{% block wp_addwp %}{% endblock %}">
+                <a href="{% url 'water_park:wp-add' %}">
+                    <!-- <span class="oi oi-droplet">Hello</span> -->
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;Add WaterPark
+                    <!-- <span class="glyphicon glyphicon-cd">Hello</span> -->
+                </a>
+            </li>
+            <li class="{% block wp_comments %}{% endblock %}">
+                <a href="{% url 'water_park:index' %}">
+                    <!-- <span class="oi oi-droplet">Hello</span> -->
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>&nbsp;&nbsp;Comments
+                    <!-- <span class="glyphicon glyphicon-cd">Hello</span> -->
+                </a>
+            </li>
+        </ul>
+
+        <form class="navbar-form navbar-right" role="search" method="get" action="#">
+            <div class="form-group">
+                <input type="text" class="form-control" name="q" value="Search Here">
+            </div>
+            <button type="submit" class="btn btn-success">Search</button>
+        </form>
+    </div>
+</div>
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>

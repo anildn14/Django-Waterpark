@@ -1,0 +1,9 @@
+{% extends 'water_park/base.html' %}
+{% load staticfiles %}
+{% block title %} Message {% endblock %}
+{% block body %}
+{% if error_message %}
+    <h1><strong>{{ error_message }}</strong></h1>
+    <a href="{{request.META.HTTP_REFERER|escape}}" class="btn btn-default btn-lg" role="button">Back</a>
+{% endif %}
+{% endblock %}

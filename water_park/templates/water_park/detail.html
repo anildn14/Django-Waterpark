@@ -1,0 +1,123 @@
+{% extends 'water_park/base.html' %}
+{% load staticfiles %}
+{% block title %} WaterPark Details {% endblock %}
+{% block wp_details %}active{% endblock %}
+{% block body %}
+
+
+<div class="container-fluid wp-container">
+    <div class="row">
+
+        <!-- Left WP Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{% url 'water_park:detail' parkid.id %}">
+                        {% if parkid.park_logo %}
+                            <a href="{{ parkid.park_logo.url }}"  target="_blank">
+                                <img src="{{ parkid.park_logo.url }}" class="img-responsive">
+                            </a>
+                            <!-- <img src="{{ parkid.park_logo.url }}" class="img-responsive"> -->
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                    </a>
+                    <h1 style="display: inline-block;max-width:95%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{ parkid.park_name }}</h1>
+                    <h3>{{ parkid.park_address }}</h3>
+                    <!-- <h3>Price : {{ parkid.park_price }}</h3> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Details and Images -->
+        <div class="col-sm-8 col-md-9">
+
+            <!-- <ul class="nav nav-pills" style="margin-bottom: 10px;" >
+                <li role="presentation" class="active"><a href="{% url 'water_park:detail' parkid.id %}">View All</a></li>
+                <li role="presentation" class="active"><a href="{% url 'water_park:detail' parkid.id %}">Add Images</a></li>
+            </ul> -->
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <h3>Details</h3>
+
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Park Name</th>
+                            <th>Park Address</th>
+                            <th>Park Time</th>
+                            <th>Park Price</th>
+                            <th>Park Likes</th>
+                            <th>Park URL</th>
+                            <th>Document</th>
+                            <th>Favorite</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ parkid.park_name }}</td>
+                                <td>{{ parkid.park_address }}</td>
+                                <td>{{ parkid.park_time }}</td>
+                                <td>{{ parkid.park_price }}</td>
+                                <td>{{ parkid.park_likes }}</td>
+                                <td><a href="{{ parkid.park_url }}"  target="_blank">{{ parkid.park_url }}</td>
+                                <td><a href="{{ parkid.park_docs.url }}"  target="_blank">{{ parkid.park_docs }}</td>
+                                <td>
+                                    <a href="{% url 'water_park:favorite_park' parkid.id %}" class="btn-favorite"><span class="glyphicon glyphicon-star{% if not parkid.is_fav %}-empty{% endif %}"></span></a>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <!-- # ADD IMAGE -->
+            <div class="col-sm-4 col-lg-3" style="padding: 20px;">
+                <div class="thumbnail" style="height:350px;width:300px;">
+                    <h3 style="text-align: center"> Add Image </h3>
+                    <form action="{% url 'water_park:add_image' parkid.id %}" style="display: inline;">
+                        {% csrf_token %}
+                        <a href="{% url 'water_park:add_image' parkid.id %}">
+                            <img alt="Add Image" src="{% static 'water_park/images/plus.png' %}" class="img-responsive" style="width:200px;padding-top: 30px;">
+                        </a>
+                    </form>
+                </div>
+            </div>
+            {% for img in parkid.images_set.all %}
+
+                
+                <div class="col-sm-4 col-lg-3" style="padding: 20px;">
+                    <div class="thumbnail" style="height:350px;width:300px">
+                        <form action="{% url 'water_park:delete_image' parkid.id img.id %}" method="put" style="display: inline;">
+                            {% csrf_token %}
+                            <input type="hidden" name="wp_id" value="{{ parkid.id }}" />
+                            <button type="submit" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </form>
+                        <h3 style="display: inline;"> {{ img.image_name }} </h3>
+                        <a href="{{ img.image_url.url }}"  target="_blank">
+                            <img src="{{ img.image_url.url }}" class="img-responsive" style="height:250px;width:250px">
+                        </a>
+                        
+                    </div>
+                </div>
+            {% endfor %}
+            <!-- # UPDATE IMAGE        -->
+
+        </div>
+    </div>
+
+</div>
+    </div>
+</div>
+
+{% endblock %}

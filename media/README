@@ -1,0 +1,8 @@
+get_viewset ----> http://127.0.0.1:8000/park/	---> for all
+		  http://127.0.0.1:8000/park/1/	---> for single
+
+post_viewset----> http://127.0.0.1:8000/park/
+
+post_viewset----> http://127.0.0.1:8000/park/10/  <park_id>
+put_viewset----> http://127.0.0.1:8000/park/10/   <park_id> have to send all parameters
+patch_viewset----> http://127.0.0.1:8000/park/10/ <park_id> can send single parameter which needs to be updated

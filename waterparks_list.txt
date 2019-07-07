@@ -1,0 +1,57 @@
+(6,'hello','hello','9:00 AM to 7:30 PM','https://www.esselworld.in/travel/home','999.99',0,0,'americanpie_70VgToI_HtS93ol.jpg')
+('id', 'park_name', 'park_address', 'park_time', 'park_url', 'park_price', 'park_likes', 'is_fav', 'park_logo')
+
+(1,'Accoland', 'Guwahati, Assam','10:00 AM to 6:30 PM','http://www.accoland.in/','500',0,0,'http://www.accoland.in/images/accoland.jpg')
+(2,'Amaazia', 'Surat, Gujarat','10:30 AM to 5:30 PM','https://www.amaazia.com/','899',0,0,'https://www.amaazia.com/images/LandingImages/categories/waterpark.png')
+(3,'Anandi Water Park', 'Lucknow, Uttar Pradesh','10:00 AM to 5:00 PM','http://www.anandiwaterpark.co.in/','500',0,0,'http://www.anandiwaterpark.co.in/images/logo.png')
+(4,'Aqua Marina Water Parks and Resorts', 'Hooghly, Kolkata','10:00 AM to 6:00 PM','http://www.aquamarinapark.com/','500',0,0,'http://www.aquamarinapark.com/images/thevedamvillage.png')
+(5,'Aqua Village', 'Pinjore, Haryana','10:00 AM to 7:00 PM','http://www.aquavillage.in','800',0,0,'https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-1/p720x720/57071018_2353809264686862_1885432128309559296_n.jpg?_nc_cat=107&_nc_ht=scontent-bom1-1.xx&oh=ed225ffab2efded48f8cdd772f5d1822&oe=5D3623BD')
+(6,'Aquamagica, Adlabs Imagica', 'Khopoli, Maharashtra','10:00 AM to 7:00 PM','https://www.adlabsimagica.com/','899',0,0,'https://www.entryeticket.com/image/cache/data/Theme%20park/imagica-800x800.jpg')
+(7,'Aquatica', 'Kouchpukur, Kolkata','10:00 AM to 6:00 PM','http://www.aquaticaindia.in/','1000',0,0,'http://www.aquaticaindia.in/assets/images/logo.png')
+(8,'Black Thunder', 'Mettupalayam, Tamil Nadu','10:00 AM to 6:00 PM','http://btpark.org/','750',0,0,'http://btpark.org/assets/wp-content/uploads/2015/04/logo2.png')
+(9,'Dolphin the Water World', 'Agra, Uttar Pradesh','12:00 PM to 6:00 PM','http://www.dolphinwaterworld.com/','500',0,0,'http://www.dolphinwaterworld.com/images/logo1.png')
+(10,'Dream World', 'Thrissur, Kerala','10:30 AM to 6:00 PM','http://dreamworldwaterpark.com/','800',0,0,'https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/20664396_1308072319302696_5288013518806834900_n.jpg?_nc_cat=111&_nc_ht=scontent-bom1-1.xx&oh=0c1c60e657200fd418c36572ac4d0fb1&oe=5D31618E')
+(11,'Fantasy Park', 'Palakkad, Kolkata','10:00 AM to 6:00 PM','http://fantasypark.in/','600',0,0,'https://media-cdn.tripadvisor.com/media/photo-o/09/89/85/01/fantasy-park.jpg')
+(12,'Fun N Food Park', 'Gurgaon, New Delhi','9:30 AM to 7:00 PM','https://www.funnfood.com/delhi/index.php','1000',0,0,'https://www.funnfood.com/delhi/images/logo.png')
+(13,'Fun N Food Park', 'Nagpur, Maharashtra','9:30 AM to 7:00 PM','https://www.funnfood.com/nagpur/index.php','1380',0,0,'https://www.funnfood.com/nagpur/images/logo.png')
+(14,'Funcity', 'Panchkula, Haryana','9:30 AM to 6:30 PM','https://www.funcitysurya.com/','1090',0,0,'https://www.funcitysurya.com/wp-content/uploads/2016/09/fclogo4.png')
+(15,'Funtasia Water Park', 'Patna, Bihar','10:00 AM to 6:00 PM','http://www.funtasiaisland.com/','500',0,0,'http://www.funtasiaisland.com/templates/ecoplanet-fts/images/logo.png')
+
+
+Funtasia Water Park, Patna[20]
+Jal Vihar, Hyderabad
+Juckies, Kannur, Kerala
+Jungle Water Park, Kanpur, Uttar Pradesh
+Blue World, Mandhana, Kanpur
+Sports Village, Bithoor, Kanpur
+Ekta Water Park, Kanpur
+Hungama World, Patna
+Water Island (Fantasy Motels), Kanpur Lucknow Hwy, Unnao
+Kishkinta, Chennai[21]
+Manasa Water Park, Mangalore
+Merry Kingdom, Kannur, Kerala
+Nature Park, Kolkata
+Nicco Park, Kolkata
+Ocean Park, Hyderabad
+Pink City Water Park, Jaipur
+Rose Valley Amusement Parks, Kolkata
+Sentosa, Pune
+Savin Kingdom, Siliguri, West Bengal
+Somanipuram Adventure Park, Indore
+Splashdown Waterpark Goa, Anjuna, Goa
+Splash-The Water Park Delhi, Alipur, Delhi
+Splash-The Fun World Ahmedabad, Ahmedabad, Gujarat
+Splash-The Suncity Gwalior, Gwalior, Madhya Pradesh
+Splash-The Resorts Hisar, Hisar, Haryana
+Splash Water World, Rohtak, Haryana
+Tikuji-Ni-Wadi, Thane, Maharashtra
+Vanraj water park, Junagadh, Gujarat
+Vismaya, Kannur, Kerala
+Water Kingdom, Gorai, Mumbai
+Wet N' Joy Water Park, Lonavala
+Wonderla, Kochi, Bangalore and Hyderabad
+Worlds of Wonder Water Park, Noida
+Shanku's Water Park & Resort, Mehsana Gujarat
+Swapna srushti water park, Gandhinagar Gujarat
+Heaven water world, Gondal gujarat
+Nilansh Waterpark, Lucknow

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Splash{% endblock %}</title>
+    <!-- Loads the path to static file -->
+    {% load staticfiles %}
+    
+    <!-- Latest compiled and minified CSS -->
+
+    {% comment %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css"> #go to link and save the data as .css file
+    <link rel="stylesheet" type="text/css" href="{% static 'water_park/style.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'water_park/images/wp_titlebar_5.png' %}" />
+
+    {% endcomment %}
+    <script src="{% static 'water_park/bootstrap-3.3.7-dist/js/jquery.min.js' %}"></script>
+    <script src="{% static 'water_park/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'water_park/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" />
+    <link href="{% static 'water_park/Satisfy.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'water_park/style.css' %}" />
+    <link rel="icon" type="image/png" href="{% static 'water_park/images/wp_titlebar_5.png' %}" />
+    
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="active navbar-brand" href="{% url 'water_park:index' %}">Splash</a>
+        </div>
+
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav">
+                <li class="{% block wp_details %}{% endblock %}"><a href="{% url 'water_park:index' %}"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp; Details</a></li>
+                <li class="{% block wp_addwp %}{% endblock %}"><a href="{% url 'water_park:wp-add' %}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;&nbsp;Add WaterPark</a></li>
+                <li class="{% block wp_comments %}{% endblock %}"><a href="{% url 'water_park:comments' %}"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>&nbsp;&nbsp;Comments</a></li>
+            </ul>
+
+            {% if user.is_authenticated %}
+            <!-- #interchange to change position of logout and search -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="{% url 'water_park:logout_user' %}">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
+
+
+            <form class="navbar-form navbar-right" role="search" method="get" action="{% url 'water_park:index' %}">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="q" value="{{ request.GET.q }}">
+                </div>
+                <button type="submit" class="btn btn-success">Search</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="{% block log %}{% endblock %}">
+                    {% if not user.is_authenticated %}
+                    <a href="{% url 'water_park:login_user' %}">
+                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp; Login 
+                    </a>
+                    {% else %}
+                    <a href="#">
+                        <span class="glyphicon glyphicon-log-in"></span>&nbsp; Logged in as {{ request.user }}
+                    </a>
+                    {% endif %}
+                </li>
+            </ul>
+            <!-- #interchange to change position of logout and search -->
+        </div>
+    </div>
+</nav>
+<div>
+{% block body %}
+{% endblock %}
+</div>
+<div class="footer">
+    <footer>
+        <p style="display: inline;">© Copyright 2019, All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p style="display: inline;">Created by : Anil Nambiar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p style="display: inline;">Email : anilnambiar14@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+{% comment %}
+    <!-- <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+{% endcomment %}

@@ -1,0 +1,22 @@
+[
+{
+    "model": "water_park.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$8XFeyZjiaENw$XgzQ9BmBgVheo4DaDyMVu2dT/fQeR0zS1tayM4SSbMI=",
+        "last_login": null,
+        "username": "",
+        "email": "admin@test.com",
+        "active": true,
+        "staff": false,
+        "admin": false,
+        "first_name": "",
+        "last_name": "",
+        "gender": "",
+        "age": null,
+        "marital_status": "",
+        "mobile_number": "",
+        "timestamp": "2019-01-28T05:52:45.732Z"
+    }
+}
+]
