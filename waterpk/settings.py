@@ -20,8 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n1xf_tp3!1!qmoo5#-wa0n13n#$x6+4_d$p00l^zkl7$kw0ck)'
-# SECRET_KEY = os.environ.get("WP_SECRET_KEY", '')
+SECRET_KEY = os.environ.get("WP_SECRET_KEY", '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -106,14 +105,14 @@ AUTHENTICATION_BACKENDS = (
 'django.contrib.auth.backends.ModelBackend',
 )
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '295448140310-g32s8peb8v9t6s3envp57p2uiou81ruu.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'tjrQNCoinHAEYei4sJbGWNzv'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 
 
-SOCIAL_AUTH_GITHUB_KEY = '38740f2e9075a5f83816'
-SOCIAL_AUTH_GITHUB_SECRET = '748e88c8b7c641bb2feb2044234a7d1196981c06'
+SOCIAL_AUTH_GITHUB_KEY = 
+SOCIAL_AUTH_GITHUB_SECRET = 
 
-SOCIAL_AUTH_FACEBOOK_KEY = '1286089621529313'  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '8871edc57eb213dbdf6aaada86cc38a5'  # App Secret
+SOCIAL_AUTH_FACEBOOK_KEY = 
+SOCIAL_AUTH_FACEBOOK_SECRET = 
 
 WSGI_APPLICATION = 'waterpk.wsgi.application'
 
@@ -125,28 +124,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'waterparkdb',
-        'USER':'anildn14',
-        # 'PASSWORD':'admin@123',
-        # 'USER':os.environ.get("WP_DB_USER", ''),
-        # 'PASSWORD':os.environ.get("WP_DB_PASSWORD", ''),
-        # 'USER':'root',
-        # 'PASSWORD':'root',
-        'PASSWORD':'admin@123',
+        'USER':
+        'PASSWORD':
         'HOST':'localhost',
         'PORT':8000,
     }
 }
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'anildn14$waterparkdb',
-        'USER':'anildn14',
-        'PASSWORD':'admin@123',
-        'HOST':'anildn14.mysql.pythonanywhere-services.com',
-        'PORT':'3306',
-    }
-}'''
 
 AUTH_PASSWORD_VALIDATORS = [ 
     {
