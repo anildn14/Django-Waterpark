@@ -5,7 +5,7 @@ construct==2.5.3
 Django==1.11.17
 django-haystack==2.8.1
 django-phonenumber-field==2.1.0
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 future==0.17.1
 haystack==0.42
 idna==2.8
