@@ -14,7 +14,7 @@ oauthlib==3.0.1
 pefile==2018.8.8
 phonenumbers==8.10.4
 Pillow==6.0.0
-PyJWT==1.7.1
+PyJWT==2.4.0
 pysolr==3.8.1
 python-openid==2.2.5
 python-ptrace==0.9.3
